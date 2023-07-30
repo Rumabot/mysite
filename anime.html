@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <link rel="stylesheet" href="page.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"/>
+    </head>
+    <body>
+        <div class="box" id="box"></div>
+        <input class="button" id="button" type="button" value="要素を動かす">
+        <div class="box" id="box2"></div>
+        <div class="box animated bounce infinite">bounce</div>
+        <div class="box animated flash infinite">flash</div>
+        <div class="box animated pulse infinite">pulse</div>
+        <div class="box animated zoomInDown infinite">A</div>
+        <div class="box animated flipOutY infinite">B</div>div>
+        <div class="box animated zoomInDown infinite">A</div>
+        <div class="box animated zoomInDown infinite">A</div>
+        <div class="box animated zoomInDown infinite">A</div>
+        <div class="box animated zoomInDown infinite">A</div>
+        <div class="box animated zoomInDown infinite">A</div>
+        <div class="box animated zoomInDown infinite">A</div>
+        <div class="box animated zoomInDown infinite">A</div>
+        <h1 class="ball">自己紹介</h1>
+        <canvas id="myChart"></canvas>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            const ctx = document.getElementById("myChart").getContext("2d");
+            const chart = new Chart(ctx, {
+                type: "pie",
+    
+                // データを指定
+                data: {
+                    labels: ["月", "火", "水", "木", "金", "土", "日"],
+                    datasets: [{
+                        label: "悔しいねぇ",
+                        borderColor: "blue",
+                        fill: false,
+                        data: [10, 2, 5, 4, 6, 7, 11]
+                    }]
+                },
+            });
+        </script>
+        <main id=app>
+    
+            <p>Please checkout the newer version of this; <a href="https://codepen.io/simeydotme/pen/abYWJdX" target="_blank">https://codepen.io/simeydotme/pen/abYWJdX</a></p>
+            
+            <h1>Pokemon Card, Holo Effect</h1>
+            
+            <section class="cards">
+              <div class="card charizard animated"></div>
+              <div class="card pika animated"></div>
+              <div class="card eevee animated"></div>
+              <div class="card mewtwo animated"></div>
+            </section>
+        <script src="./anime.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+     </body>
+</html>

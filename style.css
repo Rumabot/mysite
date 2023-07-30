@@ -1,0 +1,259 @@
+body {
+    background-image: url(78_20230729152458.PNG);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+#main {
+    width: 70%;
+    margin: 5rem auto;
+}
+
+.btn-square {
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #668ad8;
+    color:  whitesmoke;
+    border-bottom: solid 4px #627295;
+    border-radius: 3px;
+}
+.btn-square:active {
+    /*ボタンを押したとき*/
+    transform: translateY(4px);/*下に動く*/
+    border-bottom: none;/*線を消す*/
+}
+h2 {
+    min-width: 320px;
+    width: 38%;
+    position: relative;
+    background: #dfefff;
+    box-shadow: 0px 0px 0px 5px #dfefff;
+    border: dashed 2px white;
+    padding: 0.2em 0.5em;
+    color: #454545;
+}
+h2::after {
+    position: absolute;
+    content: '';
+    left: -7px;
+    top: -7px;
+    border-width: 0 0 15px 15px;
+    border-style: solid;
+    border-color: #bdbdbd32 #fff #a8d4ff;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+.ribbon {
+    display: inline-block;
+    position: relative;
+    height: 60px;/*高さ*/
+    line-height: 60px;/*行の高さ*/
+    text-align: center;
+    padding: 0 40px 0 18px;/*文字の左右の余白*/
+    font-size: 33px;/*文字サイズ*/
+    background: #ffc906;/*背景色*/
+    color: #000000;/*文字色*/
+}
+.ribbon::after {
+    position: absolute;
+    content: '';
+    width: 0px;
+    height: 0px;
+    top: 0;
+    right: 0;
+    border-width: 30px 15px 30px 0px;
+    border-color: transparent #b7b7b761 transparent transparent;
+    border-style: solid;
+}
+.comment {
+    width:50%;
+    margin: 20px;
+    margin-left: 20px;
+    text-align: center;
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    padding: 7px 0px;
+    min-width: 25%;
+    max-width: 200px;
+    color: #555;
+    font-size: 19px;
+    background: #e0edff;
+}
+.comment::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -80px;
+    border: 15px solid transparent;
+    border-top: 15px solid #e0edff;
+}
+.comment p {
+    margin: 0;
+}
+.carousel-inner{
+    width: 400px;
+}
+/* Navbar & Navmenu color */
+:root {
+    --background-navbar: rgba(55, 55, 55, 0.98);
+    --header:52px;
+    scroll-padding:calc(var(--header) + 30px) ;
+  }
+  .header {
+    background: var(--background-navbar);
+    position: fixed;
+    width: 100%;
+    height: 52px;
+    top: 0; /*上辺からの距離を0に設定*/
+    z-index: 10; /*要素の重なり順を指定*/
+  }
+  /* Nav items */
+  .menu {
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+    margin-top: 52px;
+    padding: 0 0 10px 0;
+    clear: both;
+    background: var(--background-navbar);
+    transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+    transform: scale(1, 0);
+    transform-origin: top;
+  }
+  /* Hamburger menu button */
+  .menu-btn:checked ~ .menu {
+    transform: scale(1, 1);
+    transform-origin: top;
+    transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+  }
+  /* Hamburger menbu text */
+  .menu a {
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ddd;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .menu li {
+    border-top: 1px solid rgb(75, 75, 75);
+    padding: 15px 0;
+    margin: 0 54px;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .menu-btn:checked ~ .menu a,
+  .menu-btn:checked ~ .menu li {
+    opacity: 1;
+    transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.2s;
+  }
+  .menu-btn {
+    display: none;
+  }
+  .menu-icon {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    padding: 24px 14px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  .navicon {
+    background: #ddd;
+    display: block;
+    height: 3px;
+    width: 26px;
+    position: relative;
+    transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+  }
+  .navicon:before,
+  .navicon:after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: #ddd;
+    transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+  }
+  .navicon:before {
+    top: 9px;
+  }
+  .navicon:after {
+    bottom: 9px;
+  }
+  /* Hamburger Menu Animation Start */
+  .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before {
+    top: 0;
+  }
+  .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    bottom: 0;
+  }
+  .menu-btn:checked ~ .menu-icon .navicon {
+    background: rgba(0, 0, 0, 0);
+    transition: 0.2192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+  }
+  /* Hamburger Menu Animation End */
+  /* Navbar Container */
+  .navtext-container {
+    width: 100%;
+    height: 52px;
+    position: absolute;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* Navbar Text */
+  .navtext {
+    position: absolute;
+    text-transform: uppercase;
+    color: #ddd;
+    letter-spacing: 4px;
+    font-size: 20px;
+  }
+ 
+.wrapper {
+    height: 8vh;
+    /*This part is important for centering*/
+    display: grid;
+    place-items: center;
+  }
+  
+  .typing-demo {
+    background-color:whitesmoke ;
+    width: 11.5ch;
+    animation: typing 2s steps(20), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+
+  
